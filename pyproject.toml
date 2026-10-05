@@ -1,0 +1,29 @@
+[project]
+name = "pyapistorm"
+version = "0.1.0"
+description = "PyAPIStorm: A Python alternative for API testing and load testing."
+readme = "README.md"
+authors = [
+    { name = "Shishir Mittal", email = "shishir.mittal.cs@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "duckdb>=1.5.6",
+    "httpx>=0.28.1",
+    "pytz>=2026.5",
+    "rich>=15.0.0",
+    "tqdm>=4.70.1",
+]
+
+[project.scripts]
+pyapistorm = "pyapistorm:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+]
