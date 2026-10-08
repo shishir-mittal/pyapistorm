@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "PyAPIStorm: A Python alternative for API testing and load testing."
 readme = "README.md"
 authors = [
-    { name = "Shishir Mittal", email = "shishir.mittal.cs@gmail.com" }
+    { name = "Shishir Mittal", email = "shishir.mittal.cs@gmail.com" },
 ]
 requires-python = ">=3.14"
 dependencies = [
@@ -16,7 +16,18 @@ dependencies = [
 ]
 
 [project.scripts]
-pyapistorm = "pyapistorm:main"
+pyapistorm = "pyapistorm.cli.app:main"
+pyapistorm-desktop = "pyapistorm.desktop.app:main"
+pyapistorm-web = "pyapistorm.api.app:main"
+
+[project.optional-dependencies]
+desktop = [
+    "PyQt6>=6.7.0",
+]
+web = [
+    "fastapi>=0.111.1",
+    "uvicorn>=0.27.0",
+]
 
 [build-system]
 requires = ["uv_build>=0.12.23,<0.13.0"]
