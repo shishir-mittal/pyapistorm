@@ -13,6 +13,7 @@ dependencies = [
     "pytz>=2026.5",
     "rich>=15.0.0",
     "tqdm>=4.70.1",
+    "structlog>=26.1.0",
 ]
 
 [project.scripts]
